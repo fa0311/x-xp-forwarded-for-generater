@@ -14,7 +14,9 @@ const { fwdForSdkExpoter } = require("./expoter");
   const go = new Go();
 
   const wasmModule = await WebAssembly.instantiate(wasmData, {
+    ...go.importObject,
     env: {
+      ...go.importObject.env,
       memory: new WebAssembly.Memory({
         initial: 10,
         limit: 100,
@@ -24,7 +26,6 @@ const { fwdForSdkExpoter } = require("./expoter");
         element: "anyfunc",
       }),
     },
-    ...go.importObject,
   });
 
   go.run(wasmModule.instance);
