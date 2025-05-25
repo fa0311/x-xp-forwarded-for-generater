@@ -1,0 +1,3 @@
+[submodule "tinygo"]
+	path = tinygo
+	url = https://github.com/tinygo-org/tinygo

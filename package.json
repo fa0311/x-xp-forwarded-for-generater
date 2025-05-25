@@ -1,0 +1,9 @@
+{
+  "name": "x-xp-forwarded-for-generater",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.js"
+}
