@@ -28,6 +28,6 @@ const { fwdForSdkExpoter } = require("./expoter");
   });
 
   go.run(wasmModule.instance);
-  const forwardedForStr = global.getForwardedForStr();
+  const forwardedForStr = await global.getForwardedForStr();
   console.log(forwardedForStr);
 })();
